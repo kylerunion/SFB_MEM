@@ -107,13 +107,13 @@ MEM_SFB__CoonIsland_HSLR_MaxElevation <- read_excel("6Jan21 MEM/MEM v8.6 TLP SFB
 ylim1 = -150
 ylim2 = 350
 xlim1 = 0
-xlim2 = 100
+xlim2 = 25
 msize = 0.75
 axis_text_size = 0.7
 axis_label_size = 1
 line_size = 2.5
-legend_space = 35.53
-x_axis = c(0,25,50,75,100)
+legend_space = 10
+x_axis = c(0,5,10,15,20,25)
 y_axis = c(-150,0,150,300)
 line_min = 1
 line_low = 2
@@ -318,7 +318,9 @@ axis(side = 1, at = x_axis, cex.lab = axis_label_size, cex.axis = axis_text_size
 axis(side = 2, at = y_axis, labels = F)
 title("Coon\nIsland", line = title_line, font.main = 1)
 
-legend(-425, -300, title = "Initial Elevation", legend = c("Min", "Low", "Med", "High", "Max", "Optimal Elevation"), lty = c(line_min, line_low, line_med, line_high, line_max, line_op), lwd = c(line_size,line_size,line_size,line_size,line_size,1), col = c(cols[1], cols[2], cols[3], cols[4], cols[5], "red"), text.width=c(legend_space,legend_space,legend_space,legend_space,legend_space,legend_space),xpd = NA, horiz = T, bty = "n", cex = 0.8)
+par(xpd = T)
+
+legend(-115, -300, title = "Initial Elevation", legend = c("Min", "Low", "Med", "High", "Max", "Optimal Elevation"), lty = c(line_min, line_low, line_med, line_high, line_max, line_op), lwd = c(line_size,line_size,line_size,line_size,line_size,1), col = c(cols[1], cols[2], cols[3], cols[4], cols[5], "red"), text.width=c(legend_space,legend_space,legend_space,legend_space,legend_space,legend_space),xpd = NA, horiz = T, bty = "n", cex = 0.8)
 
 mtext("Marsh Elevation", side = 2, outer = T, line = 3, adj = 0.54, cex = msize, font = 1)
 mtext("(cm MSL)", side = 2, outer = T, line = 2, adj = 0.54, cex = msize, font = 1)
@@ -515,7 +517,7 @@ axis(side = 1, at = x_axis, cex.lab = axis_label_size, cex.axis = axis_text_size
 axis(side = 2, at = y_axis, labels = F)
 title("Coon\nIsland", line = title_line, font.main = 1)
 
-legend(-425, -300, title = "Initial Elevation", legend = c("Min", "Low", "Med", "High", "Max", "Optimal Elevation"), lty = c(line_min, line_low, line_med, line_high, line_max, line_op), lwd = c(line_size,line_size,line_size,line_size,line_size,1), col = c(cols[1], cols[2], cols[3], cols[4], cols[5], "red"), text.width=c(legend_space,legend_space,legend_space,legend_space,legend_space,legend_space),xpd = NA, horiz = T, bty = "n", cex = 0.8)
+legend(-115, -300, title = "Initial Elevation", legend = c("Min", "Low", "Med", "High", "Max", "Optimal Elevation"), lty = c(line_min, line_low, line_med, line_high, line_max, line_op), lwd = c(line_size,line_size,line_size,line_size,line_size,1), col = c(cols[1], cols[2], cols[3], cols[4], cols[5], "red"), text.width=c(legend_space,legend_space,legend_space,legend_space,legend_space,legend_space),xpd = NA, horiz = T, bty = "n", cex = 0.8)
 
 mtext("Marsh Elevation", side = 2, outer = T, line = 3, adj = 0.54, cex = msize, font = 1)
 mtext("(cm MSL)", side = 2, outer = T, line = 2, adj = 0.54, cex = msize, font = 1)
